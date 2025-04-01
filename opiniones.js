@@ -39,8 +39,23 @@ document.addEventListener("DOMContentLoaded", function () {
             fecha: new Date().toISOString()
         };
 
-        // Guardar opinión
-        guardarOpinion(opinion);
+        // Guardar en Firestore
+        guardarOpinion(opinion).add({
+            nombre: nombre,
+            opinion: opinion,
+            calificacion: calificacion,
+            fecha: new Date()
+        })
+        .then(() => {
+            alert("¡Opinión enviada!");
+            document.getElementById("nombre").value = "";
+            document.getElementById("opinion").value = "";
+            document.getElementById("calificacion").value = "";
+            mostrarOpiniones(); // Actualizar opiniones en la página
+        })
+        .catch(error => {
+            console.error("Error al enviar opinión: ", error);
+        });
 
         // Reiniciar el formulario
         form.reset();
