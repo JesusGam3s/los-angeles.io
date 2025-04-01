@@ -158,4 +158,22 @@ document.addEventListener("DOMContentLoaded", function () {
     filtro.addEventListener("change", function () {
         cargarOpiniones(this.value);
     });
+    function mostrarOpiniones() {
+        let contenedor = document.getElementById("listaOpiniones");
+        contenedor.innerHTML = "";
+    
+        db.collection("opiniones").orderBy("fecha", "desc").onSnapshot(snapshot => {
+            contenedor.innerHTML = ""; // Limpiar antes de agregar nuevas
+            snapshot.forEach(doc => {
+                let datos = doc.data();
+                contenedor.innerHTML += `
+                    <div class="opinion">
+                        <strong>${datos.nombre}</strong> - ${datos.calificacion} estrellas
+                        <p>${datos.opinion}</p>
+                        <small>${new Date(datos.fecha.toDate()).toLocaleString()}</small>
+                    </div>
+                `;
+            });
+        });
+    }
 });
