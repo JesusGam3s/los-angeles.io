@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú - Los Ángeles</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background-color: #f8f1e5; }
+        header { background-color: #8b0000; color: white; padding: 15px; font-size: 24px; }
+        .container { margin: auto; width: 80%; padding: 20px; }
+        table { width: 80%; margin: auto; border-collapse: collapse; background: white; border-radius: 10px; overflow: hidden; }
+        th, td { padding: 15px; border-bottom: 1px solid #ddd; text-align: left; }
+        th { background-color: #c0392b; color: white; }
+        img { width: 100px; height: 100px; border-radius: 10px; }
+        footer { background-color: #8b0000; color: white; padding: 10px; bottom: 0; width: 100%; position: relative;}
+        nav { text-align: center; padding: 10px; background-color: #c0392b; }
+        nav a { color: white; text-decoration: none; margin: 0 15px; font-size: 18px; }
+        .back-to-top { position: fixed; bottom: 20px; right: 20px; background-color: #007bff; color: white; border: none;border-radius: 50%; padding: 15px; font-size: 20px; cursor: pointer; display: none; z-index: 1000; }
+        .back-to-top:hover { background-color: #0056b3; }
+        p3 { font-size: 12px;}
+        nav1 { -align: center; padding: 10px; background-color: #e56355; }
+    </style>
+</head>
+<body>
+    <header>Menú</header>
+    <nav>
+        <a href="ubicacion.html">Ubicación</a>
+        <a href="opiniones.html">Opiniones</a>
+        <a href="imagenes.html">Imagenes</a>
+        <a href="index.html">⟵ Volver Atrás</a>
+    </nav>
+    <br>
+    <nav1>
+        <label for="categoria">Selecciona una categoría:</label>
+        <select id="categoria" name="categoria">
+            <option value="#cafes">Cafés</option>
+            <option value="#infusiones">Infusiones y Tés</option>
+            <option value="#bebidas">Bebidas</option>
+            <option value="#bolleria">Bolleria</option>
+            <option value="#bocadillos">Bocadillos</option>
+            <option value="#tostadas">Tostadas</option>
+            <option value="#sandwiches">Sandwiches</option>
+        </select>
+    </nav1>
+    <div class="container">
+        <h2>Nuestros Productos</h2>
+        <div id="cafes">
+            <h3>Cafés/Descafeinados</h3>
+            <h5>Normales</h5>
+            <table>
+                <tr>
+                    <th>Imagen</th>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                </tr>
+                <tr>
+                    <td><img src="Fotos Productos/Cafe solo.jpg"></td>
+                    <td>Café solo</td>
+                    <td>1.20€</td>
+                </tr>
+                <tr>
+                    <td><img src="Fotos Productos/Cortado.jpg"></td>
+                    <td>Cortado</td>
+                    <td>1.40€</td>
+                </tr>
+                <tr>
+                    <td><img src="Fotos Productos/Cafe con leche.jpg"></td>
+                    <td>Café con Leche</td>
+                    <td>1.60€</td>
+                </tr>
+                <tr>
+                    <td><img src="Fotos Productos/Americano.jpg"></td>
+                    <td>Americano</td>
+                    <td>1.50€</td>
+                </tr>
+                <tr>
+                    <td><img src="Fotos Productos/Bombón.jpg"></td>
+                    <td>Bombón</td>
+                    <td>1.50€</td>
+                </tr>
+                <tr>
+                    <td><img src="Fotos Productos/Cola Cao.jpg"></td>
+                    <td>Cola Cao</td>
+                    <td>2.00€</td>
+                </tr>
+            </table>
+            <h5>Especiales</h5>
+            <table>
+                <tr>
+                    <th>Imagen</th>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                </tr>
+                <tr>
+                    <td><img src="Fotos Productos/Carajillo.jpg"></td>
+                    <td>Carajillo <br><p3>Ron / Whisky</p3></td>
+                    <td>1.80€</td>
+                </tr>
+                <tr>
+                    <td><img src="Fotos Productos/Carajillo de marca.jpg"></td>
+                    <td>Carajillo de marca <br><p3>Ron / Whisky</p3></td>
+                    <td>2.00€</td>
+                </tr>
+                <tr>
+                    <td><img src="Fotos Productos/Cremaet.jpg"></td>
+                    <td>Cremaet <br><p3>Canela + Azucar Moreno + Ron</p3></td>
+                    <td>2.30€</td>
+                </tr>
+                <tr>
+                    <td><img src="Fotos Productos/Vienés.jpg"></td>
+                    <td>Vienés <br><p3>Nata + Café</p3></td>
+                    <td>3.80€</td>
+                </tr>
+                <tr>
+                    <td><img src="Fotos Productos/Cafe con helado.jpg"></td>
+                    <td>Café con helado <br><p3>Leche Merengada</p3></td>
+                    <td>4.50€</td>
+                </tr>
+            </table>
+        </div>
+        <div id="infusiones-y-tes">
+            <h3>Infusiones y Tés</h3>
+            <table>
+                <tr>
+                    <th>Imagen</th>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                </tr>
+                <tr>
+                    <td><img src="Fotos Productos/Infusiones.jpg"></td>
+                    <td>Infusiones <br><p3>Manzanilla, Poleo o Tila</p3></td>
+                    <td>1.60€</td>
+                </tr>
+                <tr>
+                    <td><img src="Fotos Productos/Tes.jpg"></td>
+                    <td>Tés <br><p3>Verde, Rojo o Negro</p3></td>
+                    <td>1.60€</td>
+                </tr>
+                <tr>
+                    <td><img src="Fotos Productos/Te helado.jpg"></td>
+                    <td>Té Helado <br><p3>Sabores frutales</td>
+                    <td>2.00€</td>
+                </tr>
+                <tr>
+                    <td><img src="Fotos Productos/Roibos.jpg"></td>
+                    <td>Roibos</td>
+                    <td>2.00€</td>
+                </tr>
+            </table>
+        </div>
+        <div id="bebidas">
+            <h3>Bebidas</h3>
+            <table>
+                <tr>
+                    <th>Imagen</th>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                </tr>
+                <tr>
+                    <td><img src="Fotos Productos/Coca-Cola.jpg"></td>
+                    <td>Coca-Cola <br> (Original, Zero o Zero-Zero)</td>
+                    <td>2.00€</td>
+                </tr>
+                <tr>
+                    <td><img src="Fotos Productos/Fanta.jpg"></td>
+                    <td>Fanta <br> (Naranja o Limón)</td>
+                    <td>2.00€</td>
+                </tr>
+                <tr>
+                    <td><img src="Fotos Productos/Aquarius.jpg"></td>
+                    <td>Aquarius</td>
+                    <td>2.00€</td>
+                </tr>
+                <tr>
+                    <td><img src="Fotos Productos/Zumo.jpg"></td>
+                    <td>Zumo <br> (Melocoton, Piña, Mango o Tomate)</td>
+                    <td>1.80€</td>
+                </tr>
+                <tr>
+                    <td><img src="Fotos Productos/Nestea.jpg"></td>
+                    <td>Nestea</td>
+                    <td>2.00€</td>
+                </tr>
+                <tr>
+                    <td><img src="Fotos Productos/Tonica.jpg"></td>
+                    <td>Tónica</td>
+                    <td>1.80€</td>
+                </tr>
+                <tr>
+                    <td><img src="Fotos Productos/Bitter.jpg"></td>
+                    <td>Bitter</td>
+                    <td>1.80€</td>
+                </tr>
+                <tr>
+                    <td><img src="Fotos Productos/Agua con gas.jpg"></td>
+                    <td>Agua con gas</td>
+                    <td>1.80€</td>
+                </tr>
+                <tr>
+                    <td><img src="Fotos Productos/Botella de agua.jpg"></td>
+                    <td>Agua <br><p3> Pequeña <br>Grande</p3></td>
+                    <td><br><p3>1.20€ <br>2.00€</p3></td>
+                </tr>
+                <tr>
+                    <td><img src="Fotos Productos/Caña.jpg"></td>
+                    <td>Caña</td>
+                    <td>1.50€</td>
+                </tr>
+                <tr>
+                    <td><img src="Fotos Productos/Doble.jpg"></td>
+                    <td>Doble</td>
+                    <td>1.80€</td>
+                </tr>
+            </table>
+        </div>
+        <div id="bolleria">
+            <h3>Bolleria</h3>
+            <table>
+                <tr>
+                    <th>Imagen</th>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                </tr>
+                <tr>
+                    <td><img src="Fotos Productos/Croissant.jpg"></td>
+                    <td>Croissant</td>
+                    <td>1.50€</td>
+                </tr>
+                <tr>
+                    <td><img src="Fotos Productos/Trenzas.jpg"></td>
+                    <td>Trenzas</td>
+                    <td>€</td>
+                </tr>
+                <tr>
+                    <td><img src="Fotos Productos/Donut.jpg"></td>
+                    <td>Donut <br><p3>Blanco o negro <br>Dalmata</p3></td>
+                    <td><br><p3>1.30€ <br>1.80€</p3></td>
+                </tr>
+                <tr>
+                    <td><img src="Fotos Productos/Gofre.jpg"></td>
+                    <td>Gofre</td>
+                    <td>€</td>
+                </tr>
+                <tr>
+                    <td><img src="Fotos Productos/Berlina.jpg"></td>
+                    <td>Bomba <br><p3>Blanco <br>Chocolate</p3></td>
+                    <td><br><p3>2.00€ <br>2.00€</p3></td>
+                </tr>
+                <tr>
+                    <td><img src="Fotos Productos/Rosquilletas.jpg"></td>
+                    <td>Rosquilletas</td>
+                    <td>2.00€</td>
+                </tr>
+                <tr>
+                    <td><img src="Fotos Productos/Valencianas.jpg"></td>
+                    <td>Valencianas</td>
+                    <td>1.00€</td>
+                </tr>
+                <tr>
+                    <td><img src="Fotos Productos/Galletas.jpg"></td>
+                    <td>Galletas de canela</td>
+                    <td>0.80€</td>
+                </tr>
+            </table>
+        </div>
+        <div id="bocadillos">
+            <h3>Bocadillos</h3>
+            <h5>Tortilla Francesa</h5>
+            <table>
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                </tr>
+                <tr>
+                    <td>Tortilla Francesa</td>
+                    <td>4.00€</td>
+                </tr>
+                <tr>
+                    <td>Tortilla Francesa y Queso</td>
+                    <td>5.00€</td>
+                </tr>
+                <tr>
+                    <td>Tortilla Francesa y Sobrasada</td>
+                    <td>5.90€</td>
+                </tr>
+                <tr>
+                    <td>Tortilla Francesa y Jamón</td>
+                    <td>5.90€</td>
+                </tr>
+                <tr>
+                    <td>Tortilla Francesa y Atún</td>
+                    <td>5.90€</td>
+                </tr>
+            </table>
+            <h5>Tortilla Española</h5>
+            <table>
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                </tr>
+                <tr>
+                    <td>Tortilla Española</td>
+                    <td>4.50€</td>
+                </tr>
+                <tr>
+                    <td>Tortilla Española con Pimenton</td>
+                    <td>5.90€</td>
+                </tr>
+                <tr>
+                    <td>Tortilla Española con Bacon</td>
+                    <td>6.10€</td>
+                </tr>
+                <tr>
+                    <td>Tortilla Española con Jamón</td>
+                    <td>6.50€</td>
+                </tr>
+                <tr>
+                    <td>Tortilla Española con Sobrasada</td>
+                    <td>6.30€</td>
+                </tr>
+                <tr>
+                    <td>Tortilla Española con Longaniza</td>
+                    <td>6.30€</td>
+                </tr>
+            </table>
+            <h5>Lomo</h5>
+            <table>
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                </tr>
+                <tr>
+                    <td>Lomo con queso</td>
+                    <td>5.50€</td>
+                </tr>
+                <tr>
+                    <td>Lomo, queso y bacon</td>
+                    <td>6.10€</td>
+                </tr>
+                <tr>
+                    <td>Lomo, patatas y huevo</td>
+                    <td>6.50€</td>
+                </tr>
+            </table>
+                <h5>Especiales</h5>
+                <table>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio</th>
+                    </tr>
+                    <tr>
+                        <td>Chivito <br><p3>Lechuga, tomate, bacon, lomo, huevo y mayonesa.</p></td>
+                        <td>7.50€</td>
+                    </tr>
+                    <tr>
+                        <td>Valiente <br><p3>Sobrasada, tortilla, cebolla y tomate.</p></td>
+                        <td>7.50€</td>
+                    </tr>
+                    <tr>
+                        <td>Los Ángeles <br><p3>Lomo, jamón, queso, cebolla y tomate.</p></td>
+                        <td>7.50€</td>
+                    </tr>
+                    <tr>
+                        <td>Monteolivet <br><p3>Bacon, lomo, pimiento, cebolla y tomate.</p></td>
+                        <td>7.00€</td>
+                    </tr>
+                    <tr>
+                        <td>Kuki <br><p3>Jamón, queso, lechuga, tomate y mayonesa.</p></td>
+                        <td>6,40€</td>
+                    </tr>
+            </table>
+        </div>
+        <div id="tostadas">
+            <h3>Tostadas</h3>
+            <table>
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                </tr>
+                <tr>
+                    <td>Tomate</td>
+                    <td>1.80€</td>
+                </tr>
+                <tr>
+                    <td>Mantequilla y mermelada</td>
+                    <td>1.80€</td>
+                </tr>
+                <tr>
+                    <td>Jamón con aceite</td>
+                    <td>2.50€</td>
+                </tr>
+                <tr>
+                    <td>Jamón con tomate</td>
+                    <td>2.80€</td>
+                </tr>
+                <tr>
+                    <td>Jamón con queso</td>
+                    <td>3.00€</td>
+                </tr>
+                <tr>
+                    <td>Atún con tomate</td>
+                    <td>3.50€</td>
+                </tr>
+
+            </table>
+        </div>
+        <div id="sandwiches">
+            <h3>Sandwiches</h3>
+            <table>
+                <tr>
+                    <th>Producto</th>
+                    <th>Precio</th>
+                </tr>
+                <tr>
+                    <td>Mixto <br><p3>Jamon York y queso</p3></td>
+                    <td>4.50€</td>
+                </tr>
+                <tr>
+                    <td>Vegetal <br><p3>Lechuga, tomate, cebolla, <br>atún, huevo y mayonesa</p3></td>
+                    <td>6.50€</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <footer>
+        &copy; 2025 Los Ángeles - Bar & Cafetería
+    </footer>
+    <button onclick="scrollToTop()" class="back-to-top" id="backToTopBtn">↑</button>
+    <script src="script.js"></script>
+    <script src="desplegables script.js"></script>
+</body>
+</html>
