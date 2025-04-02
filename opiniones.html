@@ -30,28 +30,26 @@
         </nav>    
         <h2>Opiniones de nuestros clientes</h2>
 
-        <form id="opinion-form">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" required>
+        <form id="form-opinion">
+            <input type="text" id="nombre" placeholder="Tu nombre">
             <br>
             <br>
-            <label for="comentario">Comentario:</label>
-            <textarea id="comentario" required></textarea>
+            <textarea id="opinion" placeholder="Tu opinión"></textarea>
             <br>
             <br>
-            <label for="calificacion">Calificación:</label>
             <select id="calificacion">
-                <option value="5">⭐⭐⭐⭐⭐</option>
-                <option value="4">⭐⭐⭐⭐</option>
-                <option value="3">⭐⭐⭐</option>
-                <option value="2">⭐⭐</option>
-                <option value="1">⭐</option>
+                <option value="5">⭐️⭐️⭐️⭐️⭐️ - Excelente</option>
+                <option value="4">⭐️⭐️⭐️⭐️ - Muy bueno</option>
+                <option value="3">⭐️⭐️⭐️ - Regular</option>
+                <option value="2">⭐️⭐️ - Malo</option>
+                <option value="1">⭐️ - Pésimo</option>
             </select>
             <br>
             <br>
             <button type="submit">Enviar Opinión</button>
         </form>
-    
+        <script type="module" src="opiniones.js"></script>
+        
         <h3>Opiniones de otros clientes:</h3>
         <div id="opiniones-container"></div>
     
@@ -62,10 +60,9 @@
             <option value="negativas">Negativas (2-1 ⭐)</option>
             <option value="recientes">Más recientes</option>
         </select>
-        
-        <div id="opiniones-container"></div>
-        <script src="opiniones.js"></script>
-        <br>
+                
+        <div id="opiniones-lista"></div>
+
         <footer>
             &copy; 2025 Cafés Los Ángeles | Todos los derechos reservados
         </footer>    
