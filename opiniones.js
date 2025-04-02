@@ -12,33 +12,6 @@ document.addEventListener("DOMContentLoaded", cargarOpiniones);
 
 import { deleteDoc, doc } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
 
-// 📌 Función para cargar opiniones (añadimos el botón de eliminar)
-async function cargarOpiniones() {
-    const opinionesContainer = document.getElementById("opiniones-lista");
-    opinionesContainer.innerHTML = "";
-
-    try {
-        const querySnapshot = await getDocs(collection(db, "opiniones"));
-        querySnapshot.forEach((docSnap) => {
-            const data = docSnap.data();
-            const opinionId = docSnap.id;
-            const usuarioOpinion = localStorage.getItem("opinionGuardada");
-
-            const opinionHTML = `
-                <div class="opinion">
-                    <h3>${data.nombre}</h3>
-                    <p>${data.opinion}</p>
-                    <span>⭐ ${data.calificacion} / 5</span>
-                    ${usuarioOpinion === opinionId ? `<button onclick="eliminarOpinion('${opinionId}')">Eliminar</button>` : ""}
-                </div>
-            `;
-            opinionesContainer.innerHTML += opinionHTML;
-        });
-    } catch (error) {
-        console.error("Error al cargar opiniones:", error);
-    }
-}
-
 // 📌 Función para eliminar una opinión propia
 async function eliminarOpinion(opinionId) {
     if (!confirm("¿Seguro que quieres eliminar tu opinión?")) return;
@@ -53,6 +26,9 @@ async function eliminarOpinion(opinionId) {
         alert("No se pudo eliminar la opinión.");
     }
 }
+
+// Hacer la función accesible globalmente
+window.eliminarOpinion = eliminarOpinion;
 
 // 📌 Modificar la función de enviar opinión para que solo permita 1 por dispositivo
 document.getElementById("form-opinion").addEventListener("submit", async function (e) {
