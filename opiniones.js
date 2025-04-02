@@ -1,3 +1,8 @@
+if (!localStorage.getItem("dispositivoId")) {
+    localStorage.setItem("dispositivoId", crypto.randomUUID()); // Genera un ID único
+}
+let dispositivoId = localStorage.getItem("dispositivoId");
+
 import { firebaseConfig } from "./firebaseConfig.js";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
 import { getFirestore, collection, getDocs, addDoc } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
@@ -79,26 +84,33 @@ async function cargarOpiniones() {
 
     try {
         const querySnapshot = await getDocs(collection(db, "opiniones"));
+
         querySnapshot.forEach((docSnap) => {
             const data = docSnap.data();
-            const opinionId = docSnap.id;
-            const usuarioOpinion = localStorage.getItem("opinionGuardada");
+            console.log(`Opinión: ${data.opinion}, Calificación: ${data.calificacion}`); // Verifica qué datos se están obteniendo
+
+            // Aplicar filtro de calificación
+            if (filtro !== "todas" && Number(data.calificacion) !== Number(filtro)) {
+                console.log(`Filtrada: ${data.opinion}, No coincide con ${filtro}`);
+                return; // No mostrar si no coincide con el filtro
+            }
+
+            console.log(`Mostrando: ${data.opinion}, Coincide con ${filtro}`);
+
 
             const opinionHTML = `
                 <div class="opinion">
                     <h3>${data.nombre}</h3>
                     <p>${data.opinion}</p>
                     <span>⭐ ${data.calificacion} / 5</span>
-                    ${usuarioOpinion === opinionId ? `<button class="eliminar-btn" data-id="${opinionId}">Eliminar</button>` : ""}
                 </div>
             `;
             opinionesContainer.innerHTML += opinionHTML;
         });
-
     } catch (error) {
         console.error("Error al cargar opiniones:", error);
     }
-
+}
 // Agregar evento para eliminar después de cargar opiniones
 document.querySelectorAll(".eliminar-btn").forEach(button => {
     button.addEventListener("click", function () {
@@ -106,11 +118,11 @@ document.querySelectorAll(".eliminar-btn").forEach(button => {
     });
 });
 
-    localStorage.removeItem(`opinion_${dispositivoId}`);
-    localStorage.removeItem("opinionGuardada");
-}
+localStorage.removeItem(`opinion_${dispositivoId}`);
+localStorage.removeItem("opinionGuardada");
 
 document.getElementById("filtro-opiniones").addEventListener("change", function () {
     let filtroSeleccionado = this.value;
+    console.log(`Filtro seleccionado: ${filtroSeleccionado}`);
     cargarOpiniones(filtroSeleccionado);
 });
