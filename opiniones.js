@@ -1,21 +1,44 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-import { getFirestore, collection, addDoc, getDocs, deleteDoc, doc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 import { firebaseConfig } from "./firebaseConfig.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js";
+import { getFirestore, collection, getDocs, addDoc } from "https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore.js";
 
-// Inicializar Firebase
+// 🔥 Inicializar Firebase
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-// Función para enviar opinión
-document.getElementById("opinionForm").addEventListener("submit", async (event) => {
-    event.preventDefault();
+// 📌 Función para cargar y mostrar opiniones
+async function cargarOpiniones() {
+    const opinionesContainer = document.getElementById("opiniones-lista");
+    opinionesContainer.innerHTML = ""; // Limpiar antes de cargar
+
+    try {
+        const querySnapshot = await getDocs(collection(db, "opiniones"));
+        querySnapshot.forEach((doc) => {
+            const data = doc.data();
+            const opinionHTML = `
+                <div class="opinion">
+                    <h3>${data.nombre}</h3>
+                    <p>${data.opinion}</p>
+                    <span>⭐ ${data.calificacion} / 5</span>
+                </div>
+            `;
+            opinionesContainer.innerHTML += opinionHTML;
+        });
+    } catch (error) {
+        console.error("Error al cargar opiniones:", error);
+    }
+}
+
+// 📌 Función para enviar una nueva opinión
+document.getElementById("form-opinion").addEventListener("submit", async function (e) {
+    e.preventDefault(); // ⛔ Evita recargar la página
 
     let nombre = document.getElementById("nombre").value.trim();
     let opinion = document.getElementById("opinion").value.trim();
     let calificacion = document.getElementById("calificacion").value;
 
-    if (!nombre || !opinion || !calificacion) {
-        alert("Por favor, rellena todos los campos.");
+    if (nombre === "" || opinion === "" || calificacion === "") {
+        alert("Por favor, rellena todos los campos");
         return;
     }
 
@@ -23,45 +46,18 @@ document.getElementById("opinionForm").addEventListener("submit", async (event) 
         await addDoc(collection(db, "opiniones"), {
             nombre: nombre,
             opinion: opinion,
-            calificacion: calificacion,
-            timestamp: new Date()
+            calificacion: calificacion
         });
 
-        alert("Opinión enviada correctamente.");
-        document.getElementById("opinionForm").reset();
-        mostrarOpiniones();  // Recargar opiniones después de enviar una nueva
+        alert("¡Opinión enviada!");
+        document.getElementById("form-opinion").reset();
+        cargarOpiniones(); // Recargar las opiniones después de enviar una nueva
+
     } catch (error) {
-        console.error("Error al enviar opinión: ", error);
+        console.error("Error al enviar la opinión:", error);
+        alert("Error al enviar la opinión");
     }
 });
 
-// Función para mostrar opiniones
-async function mostrarOpiniones() {
-    const opinionesContainer = document.getElementById("opinionesContainer");
-    opinionesContainer.innerHTML = "";
-
-    const querySnapshot = await getDocs(collection(db, "opiniones"));
-    querySnapshot.forEach((doc) => {
-        let data = doc.data();
-        let opinionElement = document.createElement("div");
-        opinionElement.innerHTML = `
-            <p><strong>${data.nombre}</strong> (${data.calificacion}⭐): ${data.opinion}</p>
-            <button onclick="eliminarOpinion('${doc.id}')">Eliminar</button>
-        `;
-        opinionesContainer.appendChild(opinionElement);
-    });
-}
-
-// Función para eliminar una opinión
-async function eliminarOpinion(id) {
-    try {
-        await deleteDoc(doc(db, "opiniones", id));
-        alert("Opinión eliminada.");
-        mostrarOpiniones();
-    } catch (error) {
-        console.error("Error al eliminar opinión: ", error);
-    }
-}
-
-// Cargar opiniones al cargar la página
-document.addEventListener("DOMContentLoaded", mostrarOpiniones);
+// 📌 Cargar opiniones al iniciar la página
+document.addEventListener("DOMContentLoaded", cargarOpiniones);
