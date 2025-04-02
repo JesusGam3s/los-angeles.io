@@ -34,6 +34,12 @@ window.eliminarOpinion = eliminarOpinion;
 document.getElementById("form-opinion").addEventListener("submit", async function (e) {
     e.preventDefault();
 
+    function generarIdUnico() {
+        let id = `${navigator.userAgent}-${Date.now()}`;
+        localStorage.setItem("dispositivoId", id);
+        return id;
+    }
+
 // Obtener identificador del dispositivo (navigator.userAgent)
 const dispositivoId = localStorage.getItem("dispositivoId") || generarIdUnico();
 
@@ -99,4 +105,8 @@ async function cargarOpiniones() {
     } catch (error) {
         console.error("Error al cargar opiniones:", error);
     }
+    
+    localStorage.removeItem(`opinion_${dispositivoId}`);
+    localStorage.removeItem("opinionGuardada");
+
 }
