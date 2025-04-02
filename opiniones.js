@@ -95,18 +95,22 @@ async function cargarOpiniones() {
             opinionesContainer.innerHTML += opinionHTML;
         });
 
-        // Agregar evento para eliminar después de cargar opiniones
-        document.querySelectorAll(".eliminar-btn").forEach(button => {
-            button.addEventListener("click", function () {
-                eliminarOpinion(this.getAttribute("data-id"));
-            });
-        });
-
     } catch (error) {
         console.error("Error al cargar opiniones:", error);
     }
-    
+
+// Agregar evento para eliminar después de cargar opiniones
+document.querySelectorAll(".eliminar-btn").forEach(button => {
+    button.addEventListener("click", function () {
+        eliminarOpinion(this.getAttribute("data-id"));
+    });
+});
+
     localStorage.removeItem(`opinion_${dispositivoId}`);
     localStorage.removeItem("opinionGuardada");
-
 }
+
+document.getElementById("filtro-opiniones").addEventListener("change", function () {
+    let filtroSeleccionado = this.value;
+    cargarOpiniones(filtroSeleccionado);
+});
