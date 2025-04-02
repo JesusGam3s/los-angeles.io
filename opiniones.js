@@ -64,3 +64,37 @@ document.getElementById("form-opinion").addEventListener("submit", async functio
         alert("Error al enviar la opinión");
     }
 });
+
+async function cargarOpiniones() {
+    const opinionesContainer = document.getElementById("opiniones-lista");
+    opinionesContainer.innerHTML = ""; // Limpiar antes de cargar
+
+    try {
+        const querySnapshot = await getDocs(collection(db, "opiniones"));
+        querySnapshot.forEach((docSnap) => {
+            const data = docSnap.data();
+            const opinionId = docSnap.id;
+            const usuarioOpinion = localStorage.getItem("opinionGuardada");
+
+            const opinionHTML = `
+                <div class="opinion">
+                    <h3>${data.nombre}</h3>
+                    <p>${data.opinion}</p>
+                    <span>⭐ ${data.calificacion} / 5</span>
+                    ${usuarioOpinion === opinionId ? `<button class="eliminar-btn" data-id="${opinionId}">Eliminar</button>` : ""}
+                </div>
+            `;
+            opinionesContainer.innerHTML += opinionHTML;
+        });
+
+        // Agregar evento para eliminar después de cargar opiniones
+        document.querySelectorAll(".eliminar-btn").forEach(button => {
+            button.addEventListener("click", function () {
+                eliminarOpinion(this.getAttribute("data-id"));
+            });
+        });
+
+    } catch (error) {
+        console.error("Error al cargar opiniones:", error);
+    }
+}
