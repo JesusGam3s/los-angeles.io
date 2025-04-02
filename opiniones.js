@@ -34,11 +34,13 @@ window.eliminarOpinion = eliminarOpinion;
 document.getElementById("form-opinion").addEventListener("submit", async function (e) {
     e.preventDefault();
 
-    if (localStorage.getItem("opinionGuardada")) {
-        alert("Ya has enviado una opinión. Elimina la anterior para escribir otra.");
-        return;
-    }
+// Obtener identificador del dispositivo (navigator.userAgent)
+const dispositivoId = localStorage.getItem("dispositivoId") || generarIdUnico();
 
+if (localStorage.getItem("opinionGuardada") || localStorage.getItem(`opinion_${dispositivoId}`)) {
+    alert("Ya has enviado una opinión desde este dispositivo. Elimina la anterior para escribir otra.");
+    return;
+}
     let nombre = document.getElementById("nombre").value.trim();
     let opinion = document.getElementById("opinion").value.trim();
     let calificacion = document.getElementById("calificacion").value;
