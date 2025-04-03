@@ -1,3 +1,12 @@
+function obtenerIDDispositivo() {
+    let id = localStorage.getItem("dispositivoId");
+    if (!id) {
+        id = crypto.randomUUID(); // Genera un identificador único
+        localStorage.setItem("dispositivoId", id);
+    }
+    return id;
+}
+
 if (!localStorage.getItem("dispositivoId")) {
     localStorage.setItem("dispositivoId", crypto.randomUUID()); // Genera un ID único
 }
@@ -62,12 +71,31 @@ if (localStorage.getItem("opinionGuardada") || localStorage.getItem(`opinion_${d
     }
 
     try {
-        const docRef = await addDoc(collection(db, "opiniones"), {
+        const dispositivoId = obtenerIDDispositivo(); // Obtiene el ID del dispositivo
+
+        // Verificar si el dispositivo ya envió una opinión
+        const opinionesRef = collection(db, "opiniones");
+        const querySnapshot = await getDocs(opinionesRef);
+        let yaEnviado = false;
+        
+        querySnapshot.forEach((docSnap) => {
+            if (docSnap.data().dispositivoId === dispositivoId) {
+                yaEnviado = true;
+            }
+        });
+        
+        if (yaEnviado) {
+            alert("Ya has enviado una opinión desde este dispositivo.");
+            return;
+        }
+        
+        // Guardar la nueva opinión con el ID del dispositivo
+        const docRef = await addDoc(opinionesRef, {
             nombre: nombre,
             opinion: opinion,
-            calificacion: calificacion
+            calificacion: calificacion,
+            dispositivoId: dispositivoId // 🔥 Guardamos el ID del dispositivo en Firebase
         });
-
         localStorage.setItem("opinionGuardada", docRef.id);
         alert("¡Opinión enviada!");
         document.getElementById("form-opinion").reset();
@@ -78,39 +106,51 @@ if (localStorage.getItem("opinionGuardada") || localStorage.getItem(`opinion_${d
     }
 });
 
-async function cargarOpiniones() {
+// 📌 Función para cargar opiniones con filtro de calificación (evita duplicados)
+async function cargarOpiniones(filtroCalificacion = "todas") {
     const opinionesContainer = document.getElementById("opiniones-lista");
-    opinionesContainer.innerHTML = ""; // Limpiar antes de cargar
+    opinionesContainer.innerHTML = ""; // 🔥 Limpiar contenido antes de agregar opiniones (evita duplicados)
+
+    const dispositivoOpinionId = localStorage.getItem("opinionGuardada"); // Obtener ID de la opinión guardada en el dispositivo
 
     try {
         const querySnapshot = await getDocs(collection(db, "opiniones"));
+        let opinionesHTML = ""; // 🔥 Acumular opiniones en una variable (mejor rendimiento)
 
         querySnapshot.forEach((docSnap) => {
             const data = docSnap.data();
-            console.log(`Opinión: ${data.opinion}, Calificación: ${data.calificacion}`); // Verifica qué datos se están obteniendo
+            const opinionId = docSnap.id; // ID de la opinión en Firebase
 
-            // Aplicar filtro de calificación
-            if (filtro !== "todas" && Number(data.calificacion) !== Number(filtro)) {
-                console.log(`Filtrada: ${data.opinion}, No coincide con ${filtro}`);
-                return; // No mostrar si no coincide con el filtro
+            const esOpinionDelDispositivo = (dispositivoOpinionId === opinionId); // Comparar ID guardada con la de Firebase
+
+            // 📌 Aplicar filtro de calificación
+            if (filtroCalificacion !== "todas" && data.calificacion != filtroCalificacion) {
+                return; // Si la calificación no coincide, no la muestra
             }
 
-            console.log(`Mostrando: ${data.opinion}, Coincide con ${filtro}`);
-
-
-            const opinionHTML = `
+            // 🔥 Agregar la opinión a la variable (sin modificar `innerHTML` en cada iteración)
+            opinionesHTML += `
                 <div class="opinion">
                     <h3>${data.nombre}</h3>
                     <p>${data.opinion}</p>
                     <span>⭐ ${data.calificacion} / 5</span>
+                    ${esOpinionDelDispositivo ? `<button onclick="eliminarOpinion('${opinionId}')">Eliminar</button>` : ""}
                 </div>
             `;
-            opinionesContainer.innerHTML += opinionHTML;
         });
+
+        opinionesContainer.innerHTML = opinionesHTML; // 🔥 Agregar todas las opiniones una sola vez (evita parpadeos y duplicaciones)
     } catch (error) {
         console.error("Error al cargar opiniones:", error);
     }
 }
+
+    // 📌 Evento para filtrar opiniones cuando cambia el select
+    document.getElementById("filtro-opiniones").addEventListener("change", function () {
+        let filtroSeleccionado = this.value;
+        cargarOpiniones(filtroSeleccionado);
+});
+
 // Agregar evento para eliminar después de cargar opiniones
 document.querySelectorAll(".eliminar-btn").forEach(button => {
     button.addEventListener("click", function () {
