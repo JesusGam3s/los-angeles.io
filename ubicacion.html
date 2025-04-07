@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ubicación - Los Ángeles</title>
-    <style>
-        body { font-family: Arial, sans-serif; text-align: center; background-color: #f8f1e5; }
-        header { background-color: #8b0000; color: white; padding: 15px; font-size: 24px; }
-        .container { margin: auto; width: 80%; padding: 20px; }
-        footer { background-color: #8b0000; color: white; padding: 10px; position: absolute; bottom: 0; width: 100%; position: relative;}
-        nav { text-align: center; padding: 10px; background-color: #c0392b; }
-        nav a { color: white; text-decoration: none; margin: 0 15px; font-size: 18px; }
-    </style>
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ubicación - Los Ángeles</title>
+        <style>
+            body { font-family: Arial, sans-serif; text-align: center; background-color: #f8f1e5; }
+            header { background-color: #8b0000; color: white; padding: 15px; font-size: 24px; }
+            .container { margin: auto; width: 80%; padding: 20px; }
+            footer { background-color: #8b0000; color: white; padding: 10px; position: absolute; bottom: 0; width: 100%; position: relative;}
+            nav { text-align: center; padding: 10px; background-color: #c0392b; }
+            nav a { color: white; text-decoration: none; margin: 0 15px; font-size: 18px; }
+        </style>
+    </head>
 <body>
     <header>Ubicación</header>
     <nav>
@@ -21,12 +21,22 @@
         <a href="imagenes.html">Imagenes</a>
         <br>
         <a href="index.html">⟵ Volver Atrás</a>
-</nav>
-    <div class="container">
-        <h2>¿Dónde estamos?</h2>
-        <p>Nos encontramos en la Calle Obispo Jaume Peréz, 33, Valencia, España.</p>
-        <img src="Fotos Productos/Foto Bar.jpg" height="400px">
-    </div>
-    <footer>&copy; 2025 Los Ángeles - Bar & Cafetería</footer>
-</body>
+    </nav>
+    <section id="ubicacion">
+       <h2>Ubicación</h2>
+        <p>Nos encontramos aquí:</p>
+
+        <!-- Mapa de Google -->
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6161.055230462459!2d-0.369282513856865!3d39.45740769158631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6048c582a0205f%3A0x9084c58813cf1db5!2zQ2Fmw6lzIExvcyDDgW5nZWxlcw!5e0!3m2!1ses!2ses!4v1744010928944!5m2!1ses!2ses" 
+            width="600" 
+            height="450" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </section>
+        <footer>&copy; 2025 Los Ángeles - Bar & Cafetería</footer>
+    </body>
 </html>
