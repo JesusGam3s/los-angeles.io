@@ -79,3 +79,12 @@ nav a { color: white;
 .back-to-top:hover { 
     background-color: #0056b3; 
 }
+
+textarea { 
+    width: 80%; 
+    height: 100px; 
+    margin: 20px auto; 
+    padding: 10px; 
+    border-radius: 5px; 
+    border: 1px solid #ccc; 
+}
