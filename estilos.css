@@ -4,8 +4,7 @@ body {
     background-color: #f8f1e5; 
 }
 
-header { 
-    background-color: #8b0000; 
+header { background-color: #8a0000; 
     color: white; 
     padding: 15px; 
     font-size: 24px; 
@@ -37,7 +36,8 @@ th {
     color: white; 
 }
 
-img { width: 100px; 
+img { 
+    width: 100px; 
     height: 100px; 
     border-radius: 10px; 
 }
@@ -50,12 +50,14 @@ footer {
     position: relative;
 }
 
-nav { text-align: center; 
+nav { 
+    text-align: center; 
     padding: 10px; 
     background-color: #c0392b; 
 }
 
-nav a { color: white;
+nav a { 
+    color: white; 
     text-decoration: none; 
     margin: 0 15px; 
     font-size: 18px; 
@@ -80,12 +82,11 @@ nav a { color: white;
     background-color: #0056b3; 
 }
 
-textarea { 
-    width: 80%; 
-    height: 100px; 
-    margin: 20px auto; 
+p3 { font-size: 12px;
+}
+
+nav1 {
+    text-align: center; 
     padding: 10px; 
-    border-radius: 5px; 
-    border: 1px solid #ccc; 
-    line-clamp: 4;
+    background-color: #e56355; 
 }

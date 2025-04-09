@@ -1,29 +1,9 @@
-// Lista de sugerencias predefinidas
-const sugerencias = [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "GitHub Copilot",
-    "Web Development",
-    "Responsive Design"
-];
-
-// Función para mostrar las sugerencias dinámicamente
-function mostrarSugerencias() {
-    const input = document.getElementById("search-input").value.toLowerCase();
-    const listaSugerencias = document.getElementById("suggestions-list");
-    
-    // Limpiar la lista de sugerencias
-    listaSugerencias.innerHTML = "";
-
-    // Filtrar y agregar las sugerencias que coincidan con el texto ingresado
-    const resultados = sugerencias.filter(sugerencia => 
-        sugerencia.toLowerCase().includes(input)
-    );
-
-    resultados.forEach(resultado => {
-        const item = document.createElement("li");
-        item.textContent = resultado;
-        listaSugerencias.appendChild(item);
-    });
-}
+document.getElementById("boton-sugerencia").addEventListener("click", function () {
+    const destinatario = "tucorreo@gmail.com"; // Cámbialo por el tuyo
+    const asunto = encodeURIComponent("Sugerencia para la web");
+    const cuerpo = encodeURIComponent("\n\n");
+  
+    const enlace = `https://mail.google.com/mail/?view=cm&fs=1&to=${destinatario}&su=${asunto}&body=${cuerpo}`;
+    window.open(enlace, "_blank");
+  });
+  
