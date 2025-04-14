@@ -8,7 +8,6 @@ body {
     color: #ffffff;
     background-image: url("Fotos/Fondo.jpg");
     background-size: cover;        /* Hace que la imagen cubra todo el fondo */
-    background-repeat: ;  /* Evita que se repita */
     background-position: center;   /* Centra la imagen */
     background-size: 500px
   }
@@ -118,6 +117,13 @@ body {
     width: 450px;
     height: 450px;
   }
+
+  .img-cartel {
+    border-radius: 10px;
+    width: 300px;
+    height: 300px;
+  }
+
   /* ---------- BOTÓN SUGERENCIAS (contacto.html) ---------- */
   #boton-sugerencia {
     padding: 10px 20px;
