@@ -8,8 +8,9 @@ body {
     color: #ffffff;
     background-image: url("Fotos/Fondo.jpg");
     background-size: cover;        /* Hace que la imagen cubra todo el fondo */
-    background-repeat: no-repeat;  /* Evita que se repita */
+    background-repeat: ;  /* Evita que se repita */
     background-position: center;   /* Centra la imagen */
+    background-size: 500px
   }
   
   /* ---------- TIPOGRAFÍA Y ENCABEZADO ---------- */
