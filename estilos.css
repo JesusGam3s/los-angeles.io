@@ -78,15 +78,15 @@ body {
   /* ---------- CONTENEDORES GENERALES ---------- */
   .container-imagen {
     margin-left: 0px;
-    margin-right: 00px;
-    width: 100%;
+    margin-right: 0px;
+    width: 50%;
     padding: 20px;
     color: white;
   }
 
   .container {
     margin-left: 0px;
-    margin-right: 00px;
+    margin-right: 0px;
     width: 100%;
     padding: 20px;
     color: white;
@@ -139,6 +139,8 @@ body {
     margin-right: 0%;
     padding-left: 0%;
     display: block;
+    width: 800px;
+    height: 800px;
   }
 
   /* ---------- BOTÓN SUGERENCIAS (contacto.html) ---------- */
