@@ -77,7 +77,8 @@ body {
   
   /* ---------- CONTENEDORES GENERALES ---------- */
   .container {
-    margin-left: 0;
+    margin-left: 0px;
+    margin-right: 0px;
     width: 80%;
     padding: 20px;
     color: white;
