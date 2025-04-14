@@ -17,7 +17,7 @@ body {
     background-color: #8b0000;
     color: white;
     padding: 15px;
-    font-size: 24px;
+    font-size: 20px;
     text-align: center;
   }
   
@@ -32,7 +32,7 @@ body {
     color: white;
     text-decoration: none;
     margin: 0 15px;
-    font-size: 18px;
+    font-size: 15px;
   }
   
   nav a:hover {
@@ -120,8 +120,8 @@ body {
 
   .img-cartel {
     border-radius: 10px;
-    width: 600px;
-    height: 500px;
+    width: 700px;
+    height: 700px;
   }
 
   /* ---------- BOTÓN SUGERENCIAS (contacto.html) ---------- */
