@@ -4,7 +4,7 @@ body.style1 {
     text-align: center;
     margin: 0;
     padding: 0;
-    color: #e2e2e2;
+    color: white;
     background-image: url("Fotos/Fondo.jpg");
     background-size: cover;        /* Hace que la imagen cubra todo el fondo */
     background-position: center;   /* Centra la imagen */
