@@ -56,6 +56,33 @@ body.style1 {
     background-color: #e56355; 
   }
 
+  /* ---------- PLATO DEL DÍA ---------- */
+  .plato-del-dia {
+    background-color: #fff3cd;
+    border: 2px solid #ffecb5;
+    padding: 20px;
+    margin: 30px auto;
+    width: 60%;
+    border-radius: 15px;
+    color: #333;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .plato-del-dia h2 {
+    color: #d35400;
+    margin-bottom: 15px;
+  }
+  
+  .plato-del-dia ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .plato-del-dia li {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
   /* ---------- BOTÓN: Volver arriba ---------- */
   .back-to-top {
     position: fixed;
