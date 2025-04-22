@@ -92,8 +92,9 @@ body.style1 {
     color: white;
     border: none;
     border-radius: 50%;
-    padding: 15px;
-    font-size: 20px;
+    height: 50px;
+    width: 50px;
+    font-size: 40px;
     cursor: pointer;
     display: none;
     z-index: 1000;
@@ -102,7 +103,7 @@ body.style1 {
   .back-to-top:hover {
     background-color: #0056b3;
   }
-  
+ 
   /* ---------- PIE DE PÁGINA ---------- */
   footer {
     background-color: #670d0d;
@@ -138,6 +139,7 @@ body.style1 {
     background: white;
     border-radius: 10px;
     overflow: hidden;
+    font-size: 30px;
   }
   
   th, td {
@@ -230,5 +232,5 @@ body.style1 {
   
   /* ---------- OTRAS COSAS ---------- */
   p3 {
-    font-size: 12px;
+    font-size: 16px;
   }
