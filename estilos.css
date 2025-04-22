@@ -92,9 +92,9 @@ body.style1 {
     color: white;
     border: none;
     border-radius: 50%;
-    height: 50px;
-    width: 50px;
-    font-size: 40px;
+    height: 60px;
+    width: 60px;
+    font-size: 30px;
     cursor: pointer;
     display: none;
     z-index: 1000;
