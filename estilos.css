@@ -161,6 +161,14 @@ body.style1 {
     margin-right: auto;
   }
 
+  .img-mini2 {
+    border-radius: 10px;
+    width: 115px;
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .img-grande {
     border-radius: 10px;
     width: 450px;
