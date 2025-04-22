@@ -177,8 +177,8 @@ body.style1 {
   
   /* ---------- IMÁGENES ---------- */
   .img-mini {
-    width: 200px;           /* Tamaño fijo que se adapta bien en una tabla */
-    height: 200px;
+    width: 160px;           /* Tamaño fijo que se adapta bien en una tabla */
+    height: 160px;
     object-fit: cover;      /* Recorta sin deformar */
     border-radius: 10px;
     display: block;
