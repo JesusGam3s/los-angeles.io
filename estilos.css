@@ -154,17 +154,18 @@ body.style1 {
   
   /* ---------- IMÁGENES ---------- */
   .img-mini {
+    width: 200px;           /* Tamaño fijo que se adapta bien en una tabla */
+    height: 200px;
+    object-fit: cover;      /* Recorta sin deformar */
     border-radius: 10px;
-    width: 100px;
-    height: 100px;
-    margin-left: auto;
-    margin-right: auto;
+    display: block;
+    margin: 0 auto;         
   }
 
-  .img-mini2 {
+  .img-cerveza-grande{
     border-radius: 10px;
-    width: 115px;
-    height: 150px;
+    width: 75px;
+    height: 155px;
     margin-left: auto;
     margin-right: auto;
   }
