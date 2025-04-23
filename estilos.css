@@ -54,6 +54,7 @@ body.style1 {
     text-align: center; 
     padding: 10px; 
     background-color: #e56355; 
+    font-size: 16px;
   }
 
   /* ---------- PLATO DEL DÍA ---------- */
@@ -100,7 +101,7 @@ body.style1 {
   }
   
   .back-to-top:hover {
-    background-color: #e1ff00;
+    background-color: #850000;
   }
  
   /* ---------- PIE DE PÁGINA ---------- */
@@ -231,5 +232,5 @@ body.style1 {
   
   /* ---------- OTRAS COSAS ---------- */
   p3 {
-    font-size: 20px;
+    font-size: 15px;
   }
