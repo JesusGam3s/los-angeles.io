@@ -161,7 +161,7 @@ body.style1 {
     background: #fff8f0;
     border-radius: 10px;
     overflow: hidden;
-    font-size: 20px;
+    font-size: 30px;
   }
   
   .tabla-menu th {
@@ -232,5 +232,5 @@ body.style1 {
   
   /* ---------- OTRAS COSAS ---------- */
   p3 {
-    font-size: 14px;
+    font-size: 20px;
   }
