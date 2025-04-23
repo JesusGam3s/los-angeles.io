@@ -88,8 +88,8 @@ body.style1 {
     position: fixed;
     bottom: 20px;
     right: 10px;
-    background-color: #007bff;
-    color: rgb(208, 5, 5);
+    background-color: rgb(205, 0, 0);
+    color: #ffffff;
     border: none;
     border-radius: 50%;
     height: 60px;
@@ -100,7 +100,7 @@ body.style1 {
   }
   
   .back-to-top:hover {
-    background-color: #0056b3;
+    background-color: #e1ff00;
   }
  
   /* ---------- PIE DE PÁGINA ---------- */
@@ -231,5 +231,5 @@ body.style1 {
   
   /* ---------- OTRAS COSAS ---------- */
   p3 {
-    font-size: 16px;
+    font-size: 20px;
   }
