@@ -141,7 +141,7 @@ body.style1 {
     background: white;
     border-radius: 10px;
     overflow: hidden;
-    font-size: 30px;
+    font-size: 25px;
   }
   
   th, td {
@@ -234,5 +234,5 @@ body.style1 {
   
   /* ---------- OTRAS COSAS ---------- */
   p3 {
-    font-size: 20px;
+    font-size: 16px;
   }
