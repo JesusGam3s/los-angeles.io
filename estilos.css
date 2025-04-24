@@ -239,7 +239,7 @@ body.style1 {
 
   @media (max-width: 768px) {
     header {
-      padding: 50px; /* ← esto hace que se vea más grande en móvil */
-      font-size: 30px;
+      padding: 10px;
+      font-size: 20px;
     }
   }
