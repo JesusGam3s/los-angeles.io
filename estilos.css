@@ -236,6 +236,14 @@ th {
 }
 
 /* ---------- OTRAS COSAS ---------- */
+h1 {
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
 p3 {
   font-size: 16px;
 }
