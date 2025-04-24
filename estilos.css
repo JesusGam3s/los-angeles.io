@@ -10,229 +10,261 @@ body.style1 {
     background-position: center;   /* Centra la imagen */
     background-size: 500px;
     overflow-x: hidden;
-  }
+}
 
-  body.style2 {
-    font-family: 'Times New Roman', Times, serif;
-    text-align: center;
-    background-color: #d6d6af;
-    margin: 0;
-    padding: 0;
-    color: #e2e2e2;
-    background-size: cover;        /* Hace que la imagen cubra todo el fondo */
-    background-position: center;   /* Centra la imagen */
-    background-size: 500px;
-    overflow-x: hidden;
-  }
+body.style2 {
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  background-color: #d6d6af;
+  margin: 0;
+  padding: 0;
+  color: #e2e2e2;
+  background-size: cover;        /* Hace que la imagen cubra todo el fondo */
+  background-position: center;   /* Centra la imagen */
+  background-size: 500px;
+  overflow-x: hidden;
+}
 
-  /* ---------- TIPOGRAFÍA Y ENCABEZADO ---------- */
+/* ---------- TIPOGRAFÍA Y ENCABEZADO ---------- */
+header {
+  background-color: #d6d6af;
+  color: red;
+  padding: 15px;
+  font-size: 20px;
+  text-align: center;
+}
+
+/* ---------- NAVEGACIÓN ---------- */
+nav {
+  text-align: center;
+  padding: 10px;
+  background-color: #f3f3c2;
+}
+ 
+nav a {
+  color: red;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 15px;
+}
+  
+nav a:hover {
+  text-decoration: underline;
+}
+  
+nav1 { 
+  text-align: center; 
+  padding: 10px; 
+  background-color: #e56355; 
+  font-size: 16px;
+}
+
+/* ---------- PLATO DEL DÍA ---------- */
+.plato-del-dia {
+  background-color: #fff3cd;
+  border: 2px solid #ffecb5;
+  padding: 20px;
+  margin: 30px auto;
+  width: 60%;
+  border-radius: 15px;
+  color: #333;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.plato-del-dia h2 {
+  color: #d35400;
+  margin-bottom: 15px;
+}
+
+.plato-del-dia ul {
+  list-style: none;
+  padding: 0;
+}
+
+.plato-del-dia li {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+/* ---------- BOTÓN: Volver arriba ---------- */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  background-color: rgb(205, 0, 0);
+  color: #ffffff;
+  border: none;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+.back-to-top:hover {
+  background-color: #850000;
+}
+
+/* ---------- PIE DE PÁGINA ---------- */
+footer {
+  background-color: #670d0d;
+  color: white;
+  padding: 10px;
+  bottom: 0;
+  position: relative;
+  text-align: center;
+}
+
+/* ---------- CONTENEDORES GENERALES ---------- */
+.container-imagen {
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 50%;
+  padding: px;
+  color: white;
+}
+
+.container {
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 100%;
+  padding: 20px;
+  color: white;
+}
+
+/* ---------- TABLAS ---------- */
+table {
+  width: 20%;
+  margin: auto;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 25px;
+}
+
+th, td {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  color: black;
+}
+
+th {
+  background-color: #c0392b;
+  color: white;
+}
+
+.tabla-menu {
+  width: 80%;
+  margin: auto;
+  border-collapse: collapse;
+  background: #fff8f0;
+  border-radius: 10px;
+  overflow: hidden;
+  font-size: 30px;
+}
+
+.tabla-menu th {
+  background-color: #c0392b;
+  color: white;
+  padding: 15px;
+}
+
+.tabla-menu td {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* ---------- IMÁGENES ---------- */
+.img-mini {
+  width: 160px;           /* Tamaño fijo que se adapta bien en una tabla */
+  height: 160px;
+  object-fit: cover;      /* Recorta sin deformar */
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;         
+}
+
+.img-grande {
+  border-radius: 10px;
+  width: 450px;
+  height: 450px;
+}
+
+.img-cartel {
+  width: 850px;
+  height: 850px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img-sin-espacio {
+  margin-right: 0%;
+  padding-left: 0%;
+  display: block;
+  width: 1000px;
+  height: 1000px;
+}
+
+.img-alargada {
+  width: 95%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ---------- BOTÓN SUGERENCIAS (contacto.html) ---------- */
+#boton-sugerencia {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+#boton-sugerencia:hover {
+  background-color: #45a049;
+}
+
+/* ---------- OTRAS COSAS ---------- */
+p3 {
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
   header {
-    background-color: #d6d6af;
-    color: red;
     padding: 15px;
     font-size: 20px;
-    text-align: center;
-  }
-  
-  /* ---------- NAVEGACIÓN ---------- */
-  nav {
-    text-align: center;
-    padding: 10px;
-    background-color: #f3f3c2;
   }
   
   nav a {
-    color: red;
-    text-decoration: none;
-    margin: 0 15px;
-    font-size: 15px;
-  }
-  
-  nav a:hover {
-    text-decoration: underline;
-  }
-  
-  nav1 { 
-    text-align: center; 
-    padding: 10px; 
-    background-color: #e56355; 
-    font-size: 16px;
+    font-size: 14px;
+    margin: 0 10px;
   }
 
-  /* ---------- PLATO DEL DÍA ---------- */
-  .plato-del-dia {
-    background-color: #fff3cd;
-    border: 2px solid #ffecb5;
-    padding: 20px;
-    margin: 30px auto;
-    width: 60%;
-    border-radius: 15px;
-    color: #333;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  img {
+    max-width: 100%;
+    height: auto;
   }
   
-  .plato-del-dia h2 {
-    color: #d35400;
-    margin-bottom: 15px;
-  }
-  
-  .plato-del-dia ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .plato-del-dia li {
-    margin-bottom: 10px;
-    font-size: 16px;
-  }
-  
-  /* ---------- BOTÓN: Volver arriba ---------- */
-  .back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 10px;
-    background-color: rgb(205, 0, 0);
-    color: #ffffff;
-    border: none;
-    border-radius: 50%;
-    height: 60px;
-    width: 60px;
-    font-size: 30px;
-    cursor: pointer;
-    display: none;
-  }
-  
-  .back-to-top:hover {
-    background-color: #850000;
-  }
- 
-  /* ---------- PIE DE PÁGINA ---------- */
-  footer {
-    background-color: #670d0d;
-    color: white;
-    padding: 10px;
-    bottom: 0;
-    position: relative;
-    text-align: center;
-  }
-  
-  /* ---------- CONTENEDORES GENERALES ---------- */
-  .container-imagen {
-    margin-left: 0px;
-    margin-right: 0px;
-    width: 50%;
-    padding: px;
-    color: white;
-  }
-
-  .container {
-    margin-left: 0px;
-    margin-right: 0px;
-    width: 100%;
-    padding: 20px;
-    color: white;
-  }
-  
-  /* ---------- TABLAS ---------- */
   table {
-    width: 20%;
-    margin: auto;
-    border-collapse: collapse;
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    font-size: 25px;
-  }
-  
-  th, td {
-    padding: 15px;
-    border-bottom: 1px solid #ddd;
-    text-align: left;
-    color: black;
-  }
-  
-  th {
-    background-color: #c0392b;
-    color: white;
-  }
-  
-  .tabla-menu {
-    width: 80%;
-    margin: auto;
-    border-collapse: collapse;
-    background: #fff8f0;
-    border-radius: 10px;
-    overflow: hidden;
-    font-size: 30px;
-  }
-  
-  .tabla-menu th {
-    background-color: #c0392b;
-    color: white;
-    padding: 15px;
-  }
-  
-  .tabla-menu td {
-    padding: 15px;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  /* ---------- IMÁGENES ---------- */
-  .img-mini {
-    width: 160px;           /* Tamaño fijo que se adapta bien en una tabla */
-    height: 160px;
-    object-fit: cover;      /* Recorta sin deformar */
-    border-radius: 10px;
+    width: 100%;
     display: block;
-    margin: 0 auto;         
-  }
-
-  .img-grande {
-    border-radius: 10px;
-    width: 450px;
-    height: 450px;
-  }
-
-  .img-cartel {
-    width: 850px;
-    height: 850px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .img-sin-espacio {
-    margin-right: 0%;
-    padding-left: 0%;
-    display: block;
-    width: 1000px;
-    height: 1000px;
-  }
-
-  .img-alargada {
-    width: 95%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  /* ---------- BOTÓN SUGERENCIAS (contacto.html) ---------- */
-  #boton-sugerencia {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
+    overflow-x: auto;
   }
   
-  #boton-sugerencia:hover {
-    background-color: #45a049;
+  .img-cartel,
+  .img-grande,
+  .img-mini,
+  .imagen-sin-espacio {
+    width: 100% !important;
+    height: auto !important;
   }
+}
   
-  /* ---------- OTRAS COSAS ---------- */
-  p3 {
-    font-size: 16px;
-  }
