@@ -236,19 +236,3 @@ body.style1 {
   p3 {
     font-size: 20px;
   }
-
-  @media (max-width: 768px) {
-    header {
-      padding: 10px;
-      font-size: 20px;
-    }
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-  
-    table {
-      font-size: 14px;
-      overflow-x: auto;
-    }
-  }
