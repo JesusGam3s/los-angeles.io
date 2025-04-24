@@ -239,12 +239,7 @@ body.style1 {
 
   @media (max-width: 768px) {
     header {
-      font-size: 18px;
-      padding: 10px;
-    }
-  
-    nav a {
-      font-size: 14px;
-      margin: 0 8px;
+      padding: 50px; /* ← esto hace que se vea más grande en móvil */
+      font-size: 30px;
     }
   }
