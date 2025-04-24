@@ -237,34 +237,4 @@ p3 {
   font-size: 16px;
 }
 
-@media (max-width: 768px) {
-  header {
-    padding: 15px;
-    font-size: 20px;
-  }
-  
-  nav a {
-    font-size: 14px;
-    margin: 0 10px;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  table {
-    width: 100%;
-    display: block;
-    overflow-x: auto;
-  }
-  
-  .img-cartel,
-  .img-grande,
-  .img-mini,
-  .imagen-sin-espacio {
-    width: 100% !important;
-    height: auto !important;
-  }
-}
   
