@@ -248,115 +248,112 @@ p3 {
   font-size: 16px;
 }
 
-@media (min-width: 768px) {
 /* ---------- CONFIGURACIÓN GENERAL ---------- */
-html {
-  overflow-x: hidden;;
-}
+@media (min-width: 768px) {}
 body.style1 {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  text-align: center;
-  margin: 0;
-  padding: 0px;
-  color: white;
-  background-image: url("Fotos/fondo 1.jpg");
-  background-size: cover;        /* Hace que la imagen cubra todo el fondo */
-  background-position: center;   /* Centra la imagen */
-  background-size: 500px;
-  overflow-x: hidden;
-}
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0px;
+    color: white;
+    background-image: url("Fotos/fondo 1.jpg");
+    background-size: cover;        /* Hace que la imagen cubra todo el fondo */
+    background-position: center;   /* Centra la imagen */
+    background-size: 500px;
+    overflow-x: hidden;
+  }
 
-body.style2 {
-  font-family: 'Times New Roman', Times, serif;
-  text-align: center;
-  background-color: #d6d6af;
-  margin: 0;
-  padding: 0;
-  color: #e2e2e2;
-  background-size: cover;        /* Hace que la imagen cubra todo el fondo */
-  background-position: center;   /* Centra la imagen */
-  background-size: 500px;
-  overflow-x: hidden;
-}
+  body.style2 {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    background-color: #d6d6af;
+    margin: 0;
+    padding: 0;
+    color: #e2e2e2;
+    background-size: cover;        /* Hace que la imagen cubra todo el fondo */
+    background-position: center;   /* Centra la imagen */
+    background-size: 500px;
+    overflow-x: hidden;
+  }
 
-/* ---------- TIPOGRAFÍA Y ENCABEZADO ---------- */
-header {
-  background-color: #d6d6af;
-  color: red;
-  padding: 15px;
-  font-size: 20px;
-  text-align: center;
-}
+  /* ---------- TIPOGRAFÍA Y ENCABEZADO ---------- */
+  header {
+    background-color: #d6d6af;
+    color: red;
+    padding: 15px;
+    font-size: 20px;
+    text-align: center;
+  }
 
-/* ---------- NAVEGACIÓN ---------- */
-nav {
-  text-align: center;
-  padding: 10px;
-  background-color: #f3f3c2;
-}
+  /* ---------- NAVEGACIÓN ---------- */
+  nav {
+    text-align: center;
+    padding: 10px;
+    background-color: #f3f3c2;
+  }
  
-nav a {
-  color: red;
-  text-decoration: none;
-  margin: 0 15px;
-  font-size: 15px;
-}
+  nav a {
+    color: red;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 15px;
+  }
   
-nav a:hover {
-  text-decoration: underline;
-}
+  nav a:hover {
+    text-decoration: underline;
+  }
   
-nav1 { 
-  text-align: center; 
-  padding: 10px; 
-  background-color: #e56355; 
-  font-size: 16px;
-}
+  nav1 { 
+    text-align: center; 
+    padding: 10px; 
+    background-color: #e56355; 
+    font-size: 16px;
+  }
 
-/* ---------- PLATO DEL DÍA ---------- */
-.plato-del-dia {
-  background-color: #fff3cd;
-  border: 2px solid #ffecb5;
-  padding: 20px;
-  margin: 30px auto;
-  width: 60%;
-  border-radius: 15px;
-  color: #333;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-}
+  /* ---------- PLATO DEL DÍA ---------- */
+  .plato-del-dia {
+    background-color: #fff3cd;
+    border: 2px solid #ffecb5;
+    padding: 20px;
+    margin: 30px auto;
+    width: 60%;
+    border-radius: 15px;
+    color: #333;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
 
-.plato-del-dia h2 {
-  color: #d35400;
-  margin-bottom: 15px;
-}
+  .plato-del-dia h2 {
+    color: #d35400;
+    margin-bottom: 15px;
+  }
 
-.plato-del-dia ul {
-  list-style: none;
-  padding: 0;
-}
+  .plato-del-dia ul {
+    list-style: none;
+    padding: 0;
+  }
 
-.plato-del-dia li {
-  margin-bottom: 10px;
-  font-size: 16px;
-}
+  .plato-del-dia li {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
 
-/* ---------- BOTÓN: Volver arriba ---------- */
-.back-to-top {
-  position: fixed;
-  bottom: 20px;
-  right: 10px;
-  background-color: rgb(205, 0, 0);
-  color: #ffffff;
-  border: none;
-  border-radius: 50%;
-  height: 60px;
-  width: 60px;
-  font-size: 30px;
-  cursor: pointer;
-  display: none;
-}
+  /* ---------- BOTÓN: Volver arriba ---------- */
+  .back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    background-color: rgb(205, 0, 0);
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    height: 60px;
+    width: 60px;
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+  }
 
-.back-to-top:hover {
+  .back-to-top:hover {
   background-color: #850000;
 }
 
