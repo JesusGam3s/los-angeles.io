@@ -248,4 +248,39 @@ p3 {
   font-size: 16px;
 }
 
-  
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    overflow-x: hidden;
+  }
+
+  header, nav, footer {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  .container, .container-imagen, table {
+    width: 95%;
+    margin: auto;
+  }
+
+  .img-mini, .img-grande, .img-cartel {
+    width: 100%;
+    height: auto;
+  }
+
+  table, th, td {
+    font-size: 14px;
+    word-wrap: break-word;
+    text-align: left;
+  }
+
+  th, td {
+    padding: 10px;
+  }
+
+  nav a {
+    display: block;
+    margin: 8px 0;
+  }
+}
