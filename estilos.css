@@ -8,6 +8,7 @@ body.style1 {
   margin: 0;
   padding: 0px;
   color: white;
+  background-image: url("Fotos/fondo 1.jpg");
   background-size: cover;        /* Hace que la imagen cubra todo el fondo */
   background-position: center;   /* Centra la imagen */
   background-size: 500px;
@@ -272,21 +273,36 @@ p3 {
     height: auto;
   }
 
-  table,
-  th,
-  td {
+  table, th {
     font-size: 14px;
     word-wrap: break-word;
     text-align: left;
+    padding: 10px;
   }
 
-  th,
   td {
+    font-size: 20px;
+    word-wrap: break-word;
+    text-align: left;
     padding: 10px;
   }
 
   nav a {
-    display: block;
+    padding: 10px;
     margin: 8px 0;
+  }
+
+  /* ---------- OTRAS COSAS ---------- */
+  h1 {
+    text-align: center;
+  }
+
+  p {
+    text-align: center;
+  }
+
+
+  p3 {
+    font-size: 16px;
   }
 }
