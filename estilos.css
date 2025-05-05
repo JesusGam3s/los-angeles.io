@@ -247,7 +247,7 @@ p3 {
   font-size: 16px;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
   body {
     font-size: 16px;
     overflow-x: hidden;
@@ -258,23 +258,30 @@ p3 {
     font-size: 16px;
   }
 
-  .container, .container-imagen, table {
+  .container,
+  .container-imagen,
+  table {
     width: 95%;
-    margin: auto;
+    margin: 0 auto;
   }
 
-  .img-mini, .img-grande, .img-cartel {
+  .img-mini,
+  .img-grande,
+  .img-cartel {
     width: 100%;
     height: auto;
   }
 
-  table, th, td {
+  table,
+  th,
+  td {
     font-size: 14px;
     word-wrap: break-word;
     text-align: left;
   }
 
-  th, td {
+  th,
+  td {
     padding: 10px;
   }
 
