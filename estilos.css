@@ -206,13 +206,13 @@ footer {
 /* ---------- TABLAS ---------- */
 /* VISTA DE MÓVIL */
 body.vista-movil table {
-  width: 60%;
+  width: 50%;
   margin: auto;
   border-collapse: collapse;
   background: white;
   border-radius: 10px;
   overflow: hidden;
-  font-size: 25px;
+  font-size: 18px;
 }
 
 body.vista-movil th {
@@ -259,7 +259,7 @@ body.vista-pc table {
   background: white;
   border-radius: 10px;
   overflow: hidden;
-  font-size: 18px;
+  font-size: 25px;
 }
 
 body.vista-pc th {
