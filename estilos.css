@@ -207,7 +207,9 @@ footer {
 /* VISTA DE MÓVIL */
 body.vista-movil table {
   width: 50%;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
   border-collapse: collapse;
   background: white;
   border-radius: 10px;
@@ -231,13 +233,13 @@ body.vista-movil td {
 }
 
 body.vista-movil .tabla-menu {
-  width: 80%;
+  width: 75%;
   margin: auto;
   border-collapse: collapse;
   background: #fff8f0;
   border-radius: 10px;
   overflow: hidden;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 body.vista-movil .tabla-menu th {
