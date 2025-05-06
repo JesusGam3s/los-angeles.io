@@ -298,45 +298,57 @@ body.vista-pc .tabla-menu td {
   border-bottom: 1px solid #ddd;
 }
 
-/* ---------- IMÁGENES ---------- */
-.img-mini {
-  width: 160px;           /* Tamaño fijo que se adapta bien en una tabla */
-  height: 160px;
-  object-fit: cover;      /* Recorta sin deformar */
-  border-radius: 10px;
-  display: block;
-  margin: 0 auto;         
+/* ---------- IMÁGENES SEGÚN VISTA ---------- */
+
+/* Vista móvil */
+body.vista-movil .img-mini {
+  width: 100px;
+  height: 100px;
 }
 
-.img-grande {
-  border-radius: 10px;
+body.vista-movil .img-grande {
+  width: 250px;
+  height: 250px;
+}
+
+body.vista-movil .img-cartel {
+  width: 300px;
+  height: 300px;
+}
+
+body.vista-movil .img-sin-espacio {
+  width: 350px;
+  height: 350px;
+}
+
+body.vista-movil .img-alargada {
+  width: 90%;
+}
+
+/* Vista PC */
+body.vista-pc .img-mini {
+  width: 160px;
+  height: 160px;
+}
+
+body.vista-pc .img-grande {
   width: 450px;
   height: 450px;
 }
 
-.img-cartel {
+body.vista-pc .img-cartel {
   width: 850px;
   height: 850px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
 
-.img-sin-espacio {
-  margin-right: 0%;
-  padding-left: 0%;
-  display: block;
+body.vista-pc .img-sin-espacio {
   width: 1000px;
   height: 1000px;
 }
 
-.img-alargada {
+body.vista-pc .img-alargada {
   width: 95%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
 }
-
 /* ---------- BOTÓN SUGERENCIAS (contacto.html) ---------- */
 #boton-sugerencia {
   padding: 10px 20px;
