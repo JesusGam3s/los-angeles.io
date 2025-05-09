@@ -206,15 +206,16 @@ footer {
 /* ---------- TABLAS ---------- */
 /* VISTA DE MÓVIL */
 body.vista-movil table {
-  width: 50%;
+  width: 95vw;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   display: block;
   border-collapse: collapse;
   background: white;
   border-radius: 10px;
-  overflow: hidden;
-  font-size: 18px;
+  overflow-x: auto;
+  font-size: 16px;
 }
 
 body.vista-movil th {
