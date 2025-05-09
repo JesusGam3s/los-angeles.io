@@ -271,11 +271,8 @@ body.vista-movil .img-cartel {
 }
 
 body.vista-movil .img-sin-espacio {
-  width: 100vw;
-  max-width: 1000px;
-  height: auto;
-  display: block;
-  margin: 0 auto;
+  width: 500px;
+  height: 500px;
 }
 
 body.vista-movil .img-mini {
@@ -296,7 +293,7 @@ body.vista-pc .img-cartel {
 }
 
 body.vista-pc .img-sin-espacio {
-  width: 80vw;
+  width: 100vw;
   max-width: 1000px;
   height: auto;
   display: block;
