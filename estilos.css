@@ -11,7 +11,6 @@ body.style1 {
   background-image: url("Fotos/fondo 1.jpg");
   background-size: cover;        /* Hace que la imagen cubra todo el fondo */
   background-position: center;   /* Centra la imagen */
-  background-size: 500px;
   overflow-x: hidden;
 }
 
@@ -24,11 +23,10 @@ body.style1 {
   background-image: url("Fotos/fondo 1.jpg");
   background-size: cover;        /* Hace que la imagen cubra todo el fondo */
   background-position: center;   /* Centra la imagen */
-  background-size: 500px;
   overflow-x: hidden;
 }
 
-body.vista-movil body.style2 {
+body.style2 {
   font-family: 'Times New Roman', Times, serif;
   text-align: center;
   background-color: #d6d6af;
@@ -37,7 +35,6 @@ body.vista-movil body.style2 {
   color: #e2e2e2;
   background-size: cover;        /* Hace que la imagen cubra todo el fondo */
   background-position: center;   /* Centra la imagen */
-  background-size: 500px;
   overflow-x: hidden;
 }
 
@@ -50,49 +47,7 @@ body.vista-pc body.style2 {
   color: #e2e2e2;
   background-size: cover;        /* Hace que la imagen cubra todo el fondo */
   background-position: center;   /* Centra la imagen */
-  background-size: 500px;
   overflow-x: hidden;
-}
-
-/* NUEVO: estilos por clase de vista */
-body.vista-movil .img-grande {
-  width: 250px;
-  height: 250px;
-}
-
-body.vista-pc .img-grande {
-  width: 450px;
-  height: 450px;
-}
-
-body.vista-movil .img-cartel {
-  width: 400px;
-  height: 400px;
-}
-
-body.vista-pc .img-cartel {
-  width: 850px;
-  height: 850px;
-}
-
-body.vista-movil .img-sin-espacio {
-  width: 500px;
-  height: 500px;
-}
-
-body.vista-pc .img-sin-espacio {
-  width: 1000px;
-  height: 1000px;
-}
-
-body.vista-movil .img-mini {
-  width: 100px;
-  height: 100px;
-}
-
-body.vista-pc .img-mini {
-  width: 160px;
-  height: 160px;
 }
 
 /* ---------- TIPOGRAFÍA Y ENCABEZADO ---------- */
@@ -304,10 +259,6 @@ body.vista-pc .tabla-menu td {
 /* ---------- IMÁGENES SEGÚN VISTA ---------- */
 
 /* Vista móvil */
-body.vista-movil .img-mini {
-  width: 100px;
-  height: 100px;
-}
 
 body.vista-movil .img-grande {
   width: 250px;
@@ -315,24 +266,21 @@ body.vista-movil .img-grande {
 }
 
 body.vista-movil .img-cartel {
-  width: 300px;
-  height: 300px;
+  width: 400px;
+  height: 400px;
 }
 
 body.vista-movil .img-sin-espacio {
-  width: 380px;
-  height: 380px;
+  width: 500px;
+  height: 500px;
 }
 
-body.vista-movil .img-alargada {
-  width: 40%;
+body.vista-movil .img-mini {
+  width: 100px;
+  height: 100px;
 }
 
 /* Vista PC */
-body.vista-pc .img-mini {
-  width: 160px;
-  height: 160px;
-}
 
 body.vista-pc .img-grande {
   width: 450px;
@@ -345,13 +293,18 @@ body.vista-pc .img-cartel {
 }
 
 body.vista-pc .img-sin-espacio {
-  width: 1000px;
-  height: 1000px;
+  max-width: 90%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-body.vista-pc .img-alargada {
-  width: 95%;
+body.vista-pc .img-mini {
+  width: 160px;
+  height: 160px;
 }
+
 /* ---------- BOTÓN SUGERENCIAS (contacto.html) ---------- */
 #boton-sugerencia {
   padding: 10px 20px;
