@@ -257,9 +257,7 @@ body.vista-pc .tabla-menu td {
 }
 
 /* ---------- IMÁGENES SEGÚN VISTA ---------- */
-
 /* Vista móvil */
-
 body.vista-movil .img-grande {
   width: 250px;
   height: 250px;
@@ -281,7 +279,6 @@ body.vista-movil .img-mini {
 }
 
 /* Vista PC */
-
 body.vista-pc .img-grande {
   width: 450px;
   height: 450px;
