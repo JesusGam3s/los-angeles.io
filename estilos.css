@@ -258,9 +258,14 @@ body.vista-pc .tabla-menu td {
 
 /* ---------- IMÁGENES SEGÚN VISTA ---------- */
 /* Vista móvil */
-body.vista-movil .img-grande {
+body.vista-movil .img-grande1 {
   width: 250px;
-  height: 250px;
+  height: 300px;
+}
+
+body.vista-movil .img-grande2 {
+  width: 450px;
+  height: 400px;
 }
 
 body.vista-movil .img-cartel {
@@ -279,9 +284,14 @@ body.vista-movil .img-mini {
 }
 
 /* Vista PC */
-body.vista-pc .img-grande {
+body.vista-pc .img-grande1 {
   width: 450px;
-  height: 450px;
+  height: 500px;
+}
+
+body.vista-pc .img-grande2 {
+  width: 650px;
+  height: 600px;
 }
 
 body.vista-pc .img-cartel {
