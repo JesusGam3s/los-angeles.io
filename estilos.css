@@ -189,7 +189,7 @@ body.vista-movil td {
 }
 
 body.vista-movil .tabla-menu {
-  width: 75%;
+  width: 90%;
   margin: auto;
   border-collapse: collapse;
   background: #fff8f0;
@@ -274,8 +274,11 @@ body.vista-movil .img-cartel {
 }
 
 body.vista-movil .img-sin-espacio {
-  width: 500px;
-  height: 500px;
+ width: 90vw;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 body.vista-movil .img-mini {
@@ -300,8 +303,8 @@ body.vista-pc .img-cartel {
 }
 
 body.vista-pc .img-sin-espacio {
-  width: 100vw;
-  max-width: 1000px;
+  width: 90vw;
+  max-width: 1200px;
   height: auto;
   display: block;
   margin: 0 auto;
